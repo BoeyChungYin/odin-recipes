@@ -5,53 +5,96 @@
 }
 
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 20px;
 }
 
 h1 {
-  width: 50%;
   text-align: center;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.controls input {
+  width: 75px;
+  height: 34px;
+  padding: 4px 8px;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1e293b;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.controls input:focus {
+  border-color: #f5b042;
+  box-shadow: 0 0 0 3px rgba(245, 176, 66, 0.25);
 }
 
 .container {
+  border: 2px solid red;
   width: 400px;
   height: 400px;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  width: 400px;
+  background-color: #ffffff;
 }
 
 .box {
+  /* Dynamic flex-basis will be set per grid size */
   flex-basis: calc((100% - (15 * 4px)) / 16);
-  aspect-ratio: 1 / 1; /* Keeps each item a square */
+  aspect-ratio: 1 / 1; /*Keeps each item a square*/
   box-sizing: border-box;
   background-color: aqua;
 }
 
 .box-hover {
-  background-color:blue;
+  background-color: blue;
 }
 
 button {
   border: none;
-  margin-top: 20px;
   background: #f5b042;
-  color:floralwhite;
-  width: 80px;
-  height: 30px;
+  color: floralwhite;
+  padding: 0 16px;
+  min-width: 80px;
+  height: 34px;
   border-radius: 20px;
   font-weight: bolder;
   transition: 0.1s ease;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 button:hover {
   transform: translateY(-2px);
   cursor: pointer;
+  background: #e59f30;
 }
 
 button:active {
